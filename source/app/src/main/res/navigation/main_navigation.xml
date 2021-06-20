@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/home_fragment"
+    android:id="@+id/main_navigation">
+    <fragment android:id="@+id/home_fragment"
+        android:name="com.iservice.agency.ui.main.home.fragment.HomeFragment"/>
+    <fragment android:id="@+id/activity_fragment"
+        android:name="com.iservice.agency.ui.main.activity.fragment.ActivityFragment"/>
+    <fragment android:id="@+id/revenue_fragment"
+        android:name="com.iservice.agency.ui.main.revenue.fragment.RevenueFragment"/>
+    <fragment android:id="@+id/account_fragment"
+        android:name="com.iservice.agency.ui.main.account.fragment.AccountFragment"/>
+</navigation>

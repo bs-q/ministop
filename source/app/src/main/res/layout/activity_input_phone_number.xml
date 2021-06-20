@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="inputPhoneNumberViewModel"
+            type="com.iservice.agency.ui.register.phone.InputPhoneNumberViewModel" />
+
+        <variable name="inputPhoneNumberActivity"
+            type="com.iservice.agency.ui.register.phone.InputPhoneNumberActivity" />
+
+        <variable
+            name="inputPhoneNumberForm"
+            type="com.iservice.agency.ui.register.phone.form.InputPhoneNumberForm" />
+
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:contentDescription="@string/input_phone_logo"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher_foreground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/input_phone_title"
+                android:id="@+id/startWithPhone"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:textColor="#4E5D78"
+                android:gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/login_editext_background"
+                android:focusable="false"
+                android:clickable="false">
+
+                <ImageView
+                    android:contentDescription="@string/input_phone_icon"
+                    android:layout_width="@dimen/_40sdp"
+                    android:id="@+id/country_flag"
+                    android:paddingVertical="@dimen/_9sdp"
+                    android:paddingHorizontal="@dimen/_9sdp"
+                    android:src="@drawable/ic_phone"
+                    android:layout_height="@dimen/_40sdp"/>
+
+                <EditText
+                    android:id="@+id/inputPhoneNumberBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_toEndOf="@+id/country_flag"
+                    android:autofillHints="phone"
+                    android:hint="@string/login_username_hint"
+                    android:inputType="phone"
+                    android:background="@null"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:singleLine="true"
+                    android:text="@={inputPhoneNumberForm.inputNumber}"
+                    android:textSize="@dimen/_13ssp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/login_button_background"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/input_phone_continue"
+                android:gravity="center"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:clickable="true"
+                android:id="@+id/inputPhoneContinueBtn"
+                android:onClick="@{(v)-> inputPhoneNumberActivity.onClick(v)}"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/input_phone_helper"
+                android:id="@+id/inputPhoneHelper"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="#B0B7C3"
+                android:layout_marginTop="@dimen/_15sdp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#277CFB"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+</layout>

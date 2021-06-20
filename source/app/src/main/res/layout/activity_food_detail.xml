@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="foodDetailViewModel"
+            type="com.iservice.agency.ui.food.detail.FoodDetailViewModel" />
+
+        <variable name="foodDetailActivity"
+            type="com.iservice.agency.ui.food.detail.FoodDetailActivity" />
+
+        <variable
+            name="entity"
+            type="com.iservice.agency.data.model.db.FoodEntity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/food_detail_tool_bar"
+            android:background="#FFEB3B"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/toolbar"
+            app:titleTextColor="#303F9F"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/food_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/food_detail_name"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="@{entity.name}"/>
+                    <TextView
+                        android:id="@+id/food_detail_price"
+                        android:layout_marginVertical="@dimen/_7sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="#FFA000"
+                        android:text="@{`Giá: `+entity.price.toString() +` VND`}"/>
+                    <TextView
+                        android:id="@+id/food_detail_des"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@{entity.description}"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:id="@+id/bar_start"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:layout_toEndOf="@id/bar_start"
+                            android:layout_toStartOf="@id/bar_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold"
+                            android:text="Đánh giá &amp; bình luận"/>
+                        <View
+                            android:id="@+id/bar_end"
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/black"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_toStartOf="@id/food_detail_rate"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/_12sdp"
+                                android:text="Quan dev · 19/06/2021"/>
+                            <TextView
+                                android:layout_marginVertical="@dimen/_7sdp"
+                                android:layout_width="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+
+                                android:layout_height="wrap_content"
+                                android:text="Terrible"
+                                />
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/food_detail_rate"
+                            android:layout_width="wrap_content"
+                            android:numStars="5"
+                            android:rating="1"
+                            android:progressTint="#FFEB3B"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_height="wrap_content"/>
+                        <View
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="#9F9999"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

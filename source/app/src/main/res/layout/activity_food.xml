@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="foodViewModel"
+            type="com.iservice.agency.ui.food.FoodViewModel" />
+
+        <variable name="foodActivity"
+            type="com.iservice.agency.ui.food.FoodActivity" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/food_tool_bar"
+            android:background="#FFEB3B"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/toolbar"
+            app:titleTextColor="#303F9F"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/food_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</layout>

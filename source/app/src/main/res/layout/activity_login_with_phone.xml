@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loginWithPhoneViewModel"
+            type="com.iservice.agency.ui.register.phone.VerifyCodeViewModel" />
+
+        <variable name="verifyCodeActivity"
+            type="com.iservice.agency.ui.register.phone.VerifyCodeActivity" />
+
+        <variable
+            name="loginWithPhoneForm"
+            type="com.iservice.agency.ui.register.phone.form.LoginWithPhoneForm" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher_foreground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_with_phone_title"
+                android:id="@+id/loginWithPhone"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:textColor="#4E5D78"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{loginWithPhoneForm.phoneNumber}"
+                android:id="@+id/phoneHelper"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="#B0B7C3"
+            />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_20sdp">
+
+                <RelativeLayout
+                    android:id="@+id/verify_code_01"
+                    android:layout_width="@dimen/_47sdp"
+                    android:layout_height="@dimen/_47sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/verify_code_02"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_54sdp"
+                        android:id="@+id/verify_code_01_txt"
+                        android:background="@drawable/login_editext_background"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="@={loginWithPhoneForm.verifyCode01}"
+                        android:nextFocusForward="@id/verify_code_02_txt"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_13ssp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/verify_code_02"
+                    android:layout_width="@dimen/_47sdp"
+                    android:layout_height="@dimen/_47sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/verify_code_03"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/verify_code_01"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/verify_code_02_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_54sdp"
+                        android:background="@drawable/login_editext_background"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:nextFocusForward="@id/verify_code_03_txt"
+                        android:text="@={loginWithPhoneForm.verifyCode02}"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_13ssp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/verify_code_03"
+                    android:layout_width="@dimen/_47sdp"
+                    android:layout_height="@dimen/_47sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/verify_code_02"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/verify_code_03_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_54sdp"
+                        android:background="@drawable/login_editext_background"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:nextFocusForward="@id/verifyButton"
+                        android:singleLine="true"
+                        android:text="@={loginWithPhoneForm.verifyCode03}"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_13ssp" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/login_button_background"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/verify_button_signin"
+                android:gravity="center"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:clickable="true"
+                android:id="@+id/verifyButton"
+                android:onClick="@{(v)-> verifyCodeActivity.onClick(v)}"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_with_phone_resent_code"
+                android:id="@+id/phoneResentCode"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="#B0B7C3"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:onClick="@{(v)->verifyCodeActivity.onClick(v)}"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#277CFB"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+</layout>

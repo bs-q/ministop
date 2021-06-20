@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">ministop</string>
+    <string name="msg_loading">Please wait…</string>
+
+    <!--Network error-->
+    <string name="newtwork_error">No internet connection, please check your connection.</string>
+    <string name="newtwork_error_button_retry">Retry</string>
+    <string name="newtwork_error_button_exit">Exit</string>
+
+    <!--Login form-->
+    <string name="login_title">Sign In</string>
+    <string name="login_username_hint">Enter email or phone number</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_forgot_password">Recovery password</string>
+    <string name="login_button_sign_in">Sign In</string>
+    <string name="login_success">Login success!</string>
+    <string name="login_error">Login error!</string>
+    <string name="login_helper">or continue with</string>
+    <string name="facebook_app_id">509980900157358</string>
+    <string name="fb_login_protocol_scheme">fb509980900157358</string>
+    <string name="login_phone_error">Can not get phone number</string>
+    <string name="login_google_error">You have not registered, please register first</string>
+
+    <!--login with phone-->
+    <string name="login_with_phone_title">Verification code</string>
+    <string name="verify_button_signin">Verify now</string>
+    <string name="login_with_phone_success">We have sent a 6 digit OTP number to your device</string>
+    <string name="login_with_phone_failed">The verification code entered was invalid</string>
+    <string name="login_with_phone_OTP_required">Please input OTP number first</string>
+    <string name="login_with_phone_resent_code">Resent code</string>
+    <string name="send_OTP_fail_message">Failed to sent OTP number</string>
+
+    <!--input phone-->
+    <string name="input_phone_continue">Continue</string>
+    <string name="input_phone_helper">We will send you a One time SMS message</string>
+    <string name="input_phone_title">Start with phone</string>
+    <string name="input_phone_logo">input phone logo</string>
+    <string name="input_phone_icon">input phone icon</string>
+    <string name="enter_phone_number_message">Please enter 10 digit phone number</string>
+
+
+    <!--create account-->
+    <string name="create_account_logo">create account logo</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="create_account_first_name">First Name</string>
+    <string name="create_account_last_name">Last Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="agree_with_term_and_condition">Agree with Term and Condition</string>
+    <string name="input_first_name_error_message">First name must have at least 3 characters</string>
+    <string name="input_last_name_error_message">Last name must have at least 3 characters</string>
+    <string name="input_message_error_message">Please input minimum eight characters, at least one letter and one number</string>
+    <string name="check_term_message">Please check the terms and conditions</string>
+
+    <!--main-->
+    <string name="main_tab_title_today">Hôm nay</string>
+    <string name="main_tab_accept">Chấp nhận</string>
+    <string name="main_tab_deny">Hủy yêu cầu</string>
+    <string name="main_tab_title_rate">Đánh giá</string>
+    <string name="main_tab_rate">Làm mới sau mỗi 7 ngày</string>
+
+    <!--bottom nav-->
+    <string name="nav_bottom_home_title">Trang Chủ</string>
+    <string name="nav_bottom_activity_title">Hoạt Động</string>
+    <string name="nav_bottom_revenue_title">Thu Nhập</string>
+    <string name="nav_bottom_account_title">Tài Khoản</string>
+<!--    main activity-->
+    <string name="cash">Tiền mặt</string>
+    <string name="done">Hoàn thành</string>
+    <string name="cancel">Đã hủy</string>
+    <string name="card">Thẻ</string>
+    <string name="account_qr">Quét mã QR</string>
+
+<!--    promotion-->
+    <string name="ca_vien_chien">In the evening, hungry stomachs come to the throne to prevent you from working, like craving something to fill the void before dinner time.
+The fastest &amp; safest option to "relieve cravings" is: Fry fish skewers are being DISCOUNTED 2k at MINISTOP.</string>
+    <string name="coffe">My family loves to drink tea for 3 generations.
+And I\'m addicted to MINISTOP Coffee SAME PRICE 12K from 06h00 - 11h00 EVERY DAY.
+
+When the time comes, who can resist anymore, come to MINISTOP to close the order now!
+
+MINISTOP Coffee – The “genuine” Coffee coordinates of the coffee connoisseurs.</string>
+    <string name="rice">For days when the mood is up and down, "precarious", snacking with some sweets is really "the happiness vitamin".
+
+If you are still wondering where to find the "happy vitamin", then turn right into MINISTOP with a wide variety of sweet snacks of all kinds such as: Grapefruit Tea, Corn Tea, Fresh Cream Cake, Durian Crepe Cake, Tofu with black sugar pearls, ALL of them get 1K OFF.</string>
+    <string name="ice">A new "extreme" dish appeared at MINISTOP that made Team "sweet" undeniably: Strawberry CREAM.
+
+Looking at a beautiful cake, tasting a little sweet taste of strawberry jam &amp; honey, adding a little fat of whipping cream is enough "excess gas" for a high-mood day.
+
+Come to MINISTOP to solve your sweet craving right away.
+
+Do not forget to take measures to prevent and control the epidemic according to the "5K" recommendation of the Ministry of Health to ensure the health of the community &amp; yourself when shopping at MINISTOP.</string>
+    <string name="cheese">Sự hòa quyện tuyệt vời giữa phô mai kéo sợi beo béo dai dai và xúc xích giòn sần sật đã miệng. Ăn một lần là nghiền một đời nhé!.</string>
+    <string name="bread">Món ăn vặt thơm ngon, làm từ bột nếp với lớp vỏ vàng giòn, phần ruột mềm, dẻo, dai, thơm mùi mè, hấp dẫn..
+</string>
+<string name="ca_vien_chien_p">CÁ VIÊN CHIÊN GIẢM 2K CHO DÂN GHIỀN ĂN VẶT</string>
+    <string name="coffe_p">GIỜ VÀNG GIÁ SỐC – ĐỒNG GIÁ CÀ PHÊ 12k</string>
+    <string name="rice_p">ĐÃ “CƠN THÈM” ĂN VẶT VỚI ĐỦ MÓN NGON TẠI MINISTOP</string>
+    <string name="ice_p">BÁNH KEM DÂU – NGỌT NGÀO VỊ BÁNH, THỎA LÒNG BẤT KỲ AI</string>
+    <string name="cheese_p">Xúc xích phô mai kéo sợi dai dai béo ngậy</string>
+    <string name="bread_p">Làm mới thực đơn với Bánh mì mè Hàn Quốc độc đáo</string>
+
+    <string name="format">%1$td.%1$tm.%1$tY</string>
+
+</resources>
